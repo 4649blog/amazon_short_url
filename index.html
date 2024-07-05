@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKG2DGWG41"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'xx');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazon URL Shortener</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="modules.js"></script>
+    <script type="text/javascript" src="shortener.js"></script>
+    <meta name="description" content="This Web App shorten URL(s) of Amazon.com">
+    <meta property="og:title" content="Amazon URL Shortener">
+    <meta property="og:description" content="This site shorten URL(s) of Amazon.com">
+    <meta property="og:site_name" content="Amazon URL Shortener">
+    <meta property="og:image" content="https://github.com/nigimitama/amazon-url-shortener/raw/master/img/demo.gif">
+  </script> 
+
+  </head>
+  <body>
+    <div class="container my-5">
+      <header>
+        <h1 class="text-center">Amazon URL Shortener</h1>
+      </header>
+
+      <main>
+        <div class="mx-auto my-5" style="width: 95%;">
+          <div class="row mx-auto">
+            <form name="inputForm" id="inputForm" action="" class="col-md">
+              <textarea name="textBox" id="textBox" type="text" value="" placeholder="Enter URL(s) of Amazon.com here" class="form-control" style="resize: both;"></textarea>
+            </form>
+          </div>
+          <div class="row mx-auto">
+            <div class="col-md text-center">
+              <input type="button" value="Submit" onclick="runShortener();" class="btn btn-primary my-1">
+            </div>
+          </div>
+          <div class="row mx-auto my-2">
+            <div id="resultArea" class="col-md text-center" hidden>
+              <textarea id="result" style="resize: both;" class="form-control"></textarea>
+              <button onclick="copyToClipboard()" id="copyButton" class="btn btn-light my-1">copy</button>
+            </div>
+          </div>
+          <div class="row mx-auto my-2">
+            <div id="messageArea" class="col-md text-center" hidden>
+                <p id="message"></p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p class="text-center">
+          Made by <a href='https://github.com/nigimitama' target='_blank'>mitama</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
