@@ -9,11 +9,12 @@ function shortenUrls(url) {
 
 function shortenUrl(url) {
   const domain = getDomain(url);
+  const tag + "/?tag=46490EC-22"
   const asin = getAsin(url);
   if ((domain === null) || (asin === null)) {
     return null;
   } else {
-    return domain + asin;
+    return domain + asin + tag;
   } 
 }
 
